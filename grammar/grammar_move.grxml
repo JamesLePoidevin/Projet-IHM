@@ -59,6 +59,12 @@
                 <ruleref uri="#Pointing" /><tag>out.endroit = rules.Pointing</tag>
             </item>
             
+            <!--CREER + POINTING-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Pointing" /><tag>out.endroit = rules.Pointing</tag>
+            </item>
+            
         </one-of>
         <tag>out = out.verbe  +" | "+ out.shape + " | " + out.color + " | " + out.endroit
     </tag>
