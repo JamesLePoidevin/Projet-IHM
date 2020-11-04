@@ -1,1 +1,1 @@
-java -cp bin;icar-1.2.jar IcarClient dictionnaires/recCercTri.dat
+java -cp bin;icar-1.2.jar IcarClient dictionnaires/recCercTriV2.dat

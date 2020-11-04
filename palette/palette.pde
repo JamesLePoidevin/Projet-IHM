@@ -135,17 +135,17 @@ void draw() {
 }
 
 void deplacer(){
-  if(pointage.equals("undefined")){
+  //if(pointage.equals("undefined")){
     for (int i=0;i<liste.size();i++){
       if(liste.get(i).over(new Point(mouseX, mouseY))){
         while(clicked == false){
           liste.get(i).p = new Point(mouseX, mouseY);
-          draw();
         }
+        draw();
         clicked = false;
       }
     }
-  } 
+  //} 
 }
 
 void form(String forme){
@@ -198,28 +198,28 @@ void form(String forme){
         liste.add(f);
       }else if (pointage.equals("D")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX() + 100,(int)liste.get(i).p.getY());
-           Form f = new cercle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX() + 100,(int)liste.get(i).p.getY());
+          Form f = new cercle(couleur, p);
+          liste.add(f);
+        }
+        }
         }else if (pointage.equals("N")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()-100);
-           Form f = new cercle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()-100);
+          Form f = new cercle(couleur, p);
+          liste.add(f);
+        }
+        }
         }else if (pointage.equals("S")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()+100);
-           Form f = new cercle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()+100);
+          Form f = new cercle(couleur, p);
+          liste.add(f);
+        }
+        }
         }
       
         
@@ -234,31 +234,36 @@ void form(String forme){
         liste.add(f);
       }else if (pointage.equals("S")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()+100);
-           Form f = new triangle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()+100);
+          Form f = new triangle(couleur, p);
+          liste.add(f);
+        }
+        }
         }else if (pointage.equals("N")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()-100);
-           Form f = new triangle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX(),(int)liste.get(i).p.getY()-100);
+          Form f = new triangle(couleur, p);
+          liste.add(f);
+        }
+        }
         }else if (pointage.equals("D")){
         for (int i=0;i<liste.size();i++){
-         if(liste.get(i).over(new Point(mouseX, mouseY))){ 
-           Point p =new Point((int)liste.get(i).p.getX()+100,(int)liste.get(i).p.getY());
-           Form f = new triangle(couleur, p);
-           liste.add(f);
-         }
-         }
+        if(liste.get(i).over(new Point(mouseX, mouseY))){ 
+          Point p =new Point((int)liste.get(i).p.getX()+100,(int)liste.get(i).p.getY());
+          Form f = new triangle(couleur, p);
+          liste.add(f);
+        }
+        }
         }
     break;
   }
+  couleur = "undefined";
+  verbe = "undefined";
+  forme = "undefined";
+  pointage = "undefined";
+  
 }
 
   void mouseClicked() {
