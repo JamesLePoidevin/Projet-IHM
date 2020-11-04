@@ -44,21 +44,21 @@
 
 <br>
 
-## About ##
+## :dart: About ##
 
 HMI projet pour third year engineering school, using multi modal methodes.
     Vocal = sra
     Drawing = icar
 
 
-##Technologies ##
+## :rocket: Technologies ##
 
 The following tools were used in this project:
 
 - [Processing](https://processing.org/download/)
 - [java](https://www.java.com/fr/download/)
 
-##Requirements ##
+## :white_check_mark: Requirements ##
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [java](https://www.java.com/fr/download/) and [Processing](https://processing.org/download/) installed.
 
