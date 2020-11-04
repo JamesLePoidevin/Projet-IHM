@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="iso-8859-1"?> 
+<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
+                "grammar.dtd">
+
+<grammar  version="1.0"
+          mode ="voice"
+          xmlns="http://www.w3.org/2001/06/grammar"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                              grammar.xsd"
+          xml:lang="fr-FR" root="Move" tag-format="semantics/1.0">
+
+<rule id="Move" scope="public"> 
+
+    <ruleref special="GARBAGE" />
+
+    <tag> out.endroit = "undefined" </tag>
+	<tag> out.color = "undefined" </tag>
+	<tag> out.shape = "undefined" </tag>
+
+        <one-of>
+            <item> 
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+            </item>
+
+            <!--CREER + SHAPE-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Shape" /><tag>out.shape =rules.Shape</tag>
+            </item>
+            
+            <!--CREER + SHAPE + COLOR-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Shape" /><tag>out.shape = rules.Shape</tag>
+                <ruleref uri="#Color" /><tag>out.color = rules.Color</tag>
+            </item>
+
+            <!--CREER + SHAPE + COLOR + POINTING-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Shape" /><tag>out.shape = rules.Shape</tag>
+                <ruleref uri="#Color" /><tag>out.color = rules.Color</tag>
+                <ruleref uri="#Pointing" /><tag>out.endroit = rules.Pointing</tag>
+            </item>
+
+            <!--CREER + SHAPE + POINTING + COLOR-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Shape" /><tag>out.shape = rules.Shape</tag>
+                <ruleref uri="#Pointing" /><tag>out.endroit = rules.Pointing</tag>
+                <ruleref uri="#Color" /><tag>out.color = rules.Color</tag>
+            </item>
+
+            <!--CREER + SHAPE + POINTING-->
+            <item>
+                <ruleref uri="#Verbe" /><tag>out.verbe =rules.Verbe</tag>
+                <ruleref uri="#Shape" /><tag>out.shape = rules.Shape</tag>
+                <ruleref uri="#Pointing" /><tag>out.endroit = rules.Pointing</tag>
+            </item>
+            
+        </one-of>
+        <tag>out = out.verbe  +" | "+ out.shape + " | " + out.color + " | " + out.endroit
+    </tag>
+</rule>
+
+    <rule id="Verbe">    
+        <one-of>        
+            <item>deplacer <tag>out="deplacer"</tag></item>
+            <item>supprimer <tag>out="supprimer"</tag></item>
+            <item>supprimer tous<tag>out="supprimerT"</tag></item>
+            <item>creer <tag>out="creer"</tag></item>
+        </one-of>
+    </rule>
+
+    <rule id="Shape"> 
+            <one-of>
+            
+                <item><ruleref uri="#rectangle"/> <tag>out="rectangle";</tag></item>
+
+                <item><ruleref uri="#triangle"/> <tag>out="triangle";</tag></item>
+            
+                <item><ruleref uri="#cercle"/> <tag>out="cercle";</tag></item>
+                
+                <item><ruleref uri="#losange"/> <tag>out="losange";</tag></item>
+            </one-of>
+    </rule>
+
+    <rule id="rectangle">
+        <one-of>
+            <item>rectangle</item>
+            <item>un rectangle</item>
+        </one-of> 
+    </rule>
+
+    <rule id="triangle">
+        <one-of>
+            <item>trinagle</item>
+            <item>un triangle</item>
+        </one-of> 
+    </rule> 
+
+    <rule id="cercle">
+        <one-of>
+            <item>cercle</item>
+            <item>elipse</item>
+            <item>une elipse</item>
+            <item>un cercle</item>
+        </one-of> 
+    </rule> 
+
+    <rule id="losange">
+        <one-of>
+            <item>losange</item>
+            <item>un losange</item>
+        </one-of> 
+    </rule> 
+
+    
+    <rule id="Pointing"> 
+            <one-of>
+                <item>ici <tag>out ="I";</tag></item>
+                <item>a cote de cette forme <tag>out ="D";</tag></item>
+                <item>au dessus de cette forme <tag>out ="N";</tag></item>
+                <item>en dessous de cette forme <tag>out ="S";</tag></item>
+            </one-of>
+    </rule>
+
+    <rule id="Color"> 
+        <one-of>
+            <item>rouge <tag>out ="rouge"</tag></item>
+            <item>bleu <tag>out ="bleu"</tag></item>
+            <item>vert <tag>out ="vert"</tag></item>                
+            <item>de cette couleur <tag>out ="de cette couleur"</tag></item>
+        </one-of>
+    </rule>
+</grammar>

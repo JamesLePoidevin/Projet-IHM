@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?> 
+<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
+                "grammar.dtd">
+
+<grammar  version="1.0"
+          mode ="voice"
+          xmlns="http://www.w3.org/2001/06/grammar"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                              grammar.xsd"
+          xml:lang="fr-FR" root="Color">
+
+
+
+    <rule id="Color" scope="public"> 
+            <one-of>
+            
+                <item>rouge <tag>out.text="rouge"</tag></item>
+
+                <item>bleu <tag>out.text="bleu"</tag></item>
+            
+                <item>vert <tag>out.text="vert"</tag></item>
+                
+                <item>de cette couleur <tag>out.text="de cette couleur"</tag></item>
+
+            </one-of>
+    </rule>
+  
+</grammar>

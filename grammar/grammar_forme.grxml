@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?> 
+<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
+                "grammar.dtd">
+
+<grammar  version="1.0"
+          mode ="voice"
+          xmlns="http://www.w3.org/2001/06/grammar"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                              grammar.xsd"
+          xml:lang="fr-FR" root="Shape" tag-format="semantics/1.0">
+
+
+
+    <rule id="Shape" scope="public">
+            <one-of>
+            
+                <item><ruleref uri="#rectangle"/> <tag>out="rectangle";</tag></item>
+
+                <item><ruleref uri="#triangle"/> <tag>out="triangle";</tag></item>
+            
+                <item><ruleref uri="#cercle"/> <tag>out="cercle";</tag></item>
+                
+                <item><ruleref uri="#losange"/> <tag>out="losange";</tag></item>
+            </one-of>
+    </rule>
+
+    <rule id="rectangle">
+        <one-of>
+            <item>rectangle</item>
+            <item>un rectangle</item>
+        </one-of> 
+    </rule>
+
+    <rule id="triangle">
+        <one-of>
+            <item>trinagle</item>
+            <item>un triangle</item>
+        </one-of> 
+    </rule> 
+
+    <rule id="cercle">
+        <one-of>
+            <item>cercle</item>
+            <item>elipse</item>
+            <item>une elipse</item>
+            <item>un cercle</item>
+        </one-of> 
+    </rule> 
+
+    <rule id="losange">
+        <one-of>
+            <item>losange</item>
+            <item>un losange</item>
+        </one-of> 
+    </rule> 
+  
+</grammar>
