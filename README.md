@@ -47,8 +47,8 @@
 ## :dart: About ##
 
 HMI projet pour third year engineering school, using multi modal methodes.
-    Vocal = sra
-    Drawing = icar
+    (Vocal = sra , 
+    Drawing = icar)
 
 
 ## :rocket: Technologies ##
