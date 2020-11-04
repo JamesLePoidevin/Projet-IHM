@@ -19,7 +19,7 @@ float confiance;
 boolean flag = false;
 
 void setup(){
-  size(2000, 1000);
+  size(1900, 950);
   fill(255);
   background(255);
   liste = new ArrayList();
